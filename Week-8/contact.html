@@ -1,0 +1,57 @@
+<html>
+    <title>Contact Page</title>
+    <head>
+        <link href="themes.css" type="text/css" rel="stylesheet" />
+    </head>
+    <body>
+        <script>
+            function getData(event) {
+                event.preventDefault();
+                var name = document.getElementById("name");
+                var email = document.getElementById("email");
+                var nameError = document.getElementById("nameError");
+                var emailError = document.getElementById("emailError");
+
+                nameError.textContent = "";
+                emailError.textContent = "";
+                name.classList.remove("error-border");
+                email.classList.remove("error-border");
+    
+                var isValid = true; 
+    
+                if (name.value.trim() === "") {
+                    nameError.textContent = "Please enter your name.";
+                    name.classList.add("error-border");
+                    name.classList.add("error");
+                    isValid = false;
+                }
+    
+                if (email.value.trim() === "") {
+                    emailError.textContent = "Please enter your email.";
+                    email.classList.add("error-border");
+                    email.classList.add("error");
+                    isValid = false;
+                }
+
+                if (isValid) {
+                    alert("Your info: " + name.value + " " + email.value);
+                }
+            }
+        </script>
+        <form style="background-color: pink">
+            <input type="text" value = " " id="name">Name<br>
+            <span class="error-message" id="nameError"></span>
+            <input type="text" value=" " id="email">Email<br>
+            <span class="error-message" id="emailError"></span>
+          
+            <button id="btnSubmit" class="btn btn-primary" onClick="getData(event);">Submit My Info</button>
+        </form>
+        
+
+
+
+
+
+        <a href="index.html" id="smaller">Homepage</a> | <a href="page1.html" id="smaller">Cats!</a> | <a href="page2.html" id="smaller">What is your favorite type of Cat?</a>
+    </body>
+</html>
