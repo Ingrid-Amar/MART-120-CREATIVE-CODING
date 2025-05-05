@@ -1,0 +1,62 @@
+body {
+    margin: 0;
+    background: black;
+    overflow: hidden;
+}
+canvas {
+display: block;
+}
+#footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 14px;
+    z-index: 10;
+    }
+
+#upload {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 10;
+}
+#toggle {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 10;
+    padding: 10px;
+    font-size: 16px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+#toggle:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+#audio-select {
+    position: absolute;
+    top: 50px;
+    left: 10px;
+    z-index: 10;
+    padding: 5px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+}
+#song-title {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 24px;
+    color: white;
+    text-align: center;
+    z-index: 10;
+}
